@@ -354,7 +354,14 @@
 #pragma mark - Tap Detection
 
 - (void)handleSingleTap:(CGPoint)touchPoint {
-	[_photoBrowser performSelector:@selector(toggleControls) withObject:nil afterDelay:0.2];
+    if (_photoBrowser.enableClickToDismissWhenModel)
+    {
+        [_photoBrowser performSelector:@selector(doneButtonPressed:) withObject:nil afterDelay:0.3];
+    }
+    else
+    {
+        [_photoBrowser performSelector:@selector(toggleControls) withObject:nil afterDelay:0.2];
+    }
 }
 
 - (void)handleDoubleTap:(CGPoint)touchPoint {

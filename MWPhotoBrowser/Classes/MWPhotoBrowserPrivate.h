@@ -116,6 +116,7 @@
 - (void)setControlsHidden:(BOOL)hidden animated:(BOOL)animated permanent:(BOOL)permanent;
 - (void)toggleControls;
 - (BOOL)areControlsHidden;
+- (void)doneButtonPressed:(id)sender;
 
 // Data
 - (NSUInteger)numberOfPhotos;

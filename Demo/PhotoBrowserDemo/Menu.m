@@ -1046,6 +1046,7 @@
     browser.enableGrid = enableGrid;
     browser.startOnGrid = startOnGrid;
     browser.enableSwipeToDismiss = YES;
+    browser.enableClickToDismissWhenModel = YES;
     [browser setCurrentPhotoIndex:0];
     
     // Reset selections
