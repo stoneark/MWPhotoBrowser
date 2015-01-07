@@ -117,6 +117,7 @@
 - (void)toggleControls;
 - (BOOL)areControlsHidden;
 - (void)doneButtonPressed:(id)sender;
+- (void)actionButtonPressed:(id)sender;
 
 // Data
 - (NSUInteger)numberOfPhotos;

@@ -397,6 +397,9 @@
 - (void)imageView:(UIImageView *)imageView doubleTapDetected:(UITouch *)touch {
     [self handleDoubleTap:[touch locationInView:imageView]];
 }
+- (void)imageView:(UIImageView *)imageView longPressDetected:(UILongPressGestureRecognizer *)recognizer {
+    [_photoBrowser actionButtonPressed:nil];
+}
 
 // Background View
 - (void)view:(UIView *)view singleTapDetected:(UITouch *)touch {
@@ -418,6 +421,9 @@
     touchX += self.contentOffset.x;
     touchY += self.contentOffset.y;
     [self handleDoubleTap:CGPointMake(touchX, touchY)];
+}
+- (void)view:(UIView *)view longPressDetected:(UILongPressGestureRecognizer *)recognizer {
+    [_photoBrowser actionButtonPressed:nil];
 }
 
 @end
